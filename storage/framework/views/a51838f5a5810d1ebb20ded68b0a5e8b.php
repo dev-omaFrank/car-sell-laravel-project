@@ -1,0 +1,2 @@
+<h1>Hello, welcoe to my about page</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, at vitae cumque libero voluptatum corrupti, aliquid fugiat est labore, sit porro ipsum repellat eum explicabo accusantium hic nulla magnam excepturi!</p><?php /**PATH C:\Laravel\my-first-laravel-project\resources\views/about.blade.php ENDPATH**/ ?>
