@@ -1,30 +1,21 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignupController;
 
-Route::get('/', function () {
-    $person = [
-        'name'=> 'John',
-        'email'=> 'john@testmail.com',
-    ];
-    dd($person);  
-    return view('welcome');
+
+
+
+Route::get('/', function(){
+    return view('home.index');
 });
 
-Route::view('/about', 'about');
+Route::get('/car/search', [CarController::class, 'search'])->name('car.search');
 
-Route::get('/product/{id}', function (string $id) {
-    return "Product ID = $id";
-})->whereNumber("id");
+Route::resource('car', CarController::class);
 
-Route::get("product/category/{category?}", function (string $category = null) {
-    return "Product for category= $category";
-});
+Route::get('/signup', [SignupController::class, 'create'])->name('signup');
 
-Route::get("/user/{username}", function (string $username) {
-    return "username is $username";
-})->where('username', '[a-z]+');
-
-
-Route::get('/car', [CarController::class,'index']);
+Route::get('/login', [LoginController::class, 'create'])->name('login');
