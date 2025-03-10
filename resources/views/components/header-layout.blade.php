@@ -20,7 +20,7 @@
       </svg>
     </button>
     <div class="navbar-auth">
-      <a href="{{route('car.create')}}" class="btn btn-add-new-car">
+      <a href="{{route('create')}}" class="btn btn-add-new-car">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -61,15 +61,13 @@
             <a href="{{route('car.index')}}">My Cars</a>
           </li>
           <li>
-            <a href="watchlist.html">My Favourite Cars</a>
-          </li>
-          <li>
-            <form action="#" method="post">
-              <button>Logout</button>
+            <form action="/logout" method="POST">
+              @csrf
+              <button type="submit">Logout</button>
             </form>
           </li>
         </ul>
-      </div>
+      {{-- </div>
       <a href="{{route('signup')}}" class="btn btn-primary btn-signup">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +99,7 @@
           />
         </svg>
         Login
-      </a>
+      </a> --}}
     </div>
   </div>
 </header>
