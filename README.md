@@ -56,3 +56,14 @@ Before you begin, make sure you have the following installed on your system:
 6. **Run the application**
    ```
    php artisan serve
+
+Here are some snapshots of the Carsell application:
+
+### Home Page
+![Home Page](assets/screenshots/screenshot(11).png)
+
+### User Registration
+![User Registration](assets/screenshots/screenshot(12).png)
+
+### Add Car Page
+![Add New Car](assets/screenshots/screenshot(13).png)
